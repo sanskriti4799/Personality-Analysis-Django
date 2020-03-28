@@ -13,6 +13,7 @@ Import the Quiz to Visual Studio Code
   4.Analysis of score for each domain .
   5.Certificate.
 # SCREENSHOTS
+![Screenshot (56)](https://user-images.githubusercontent.com/40361120/77820407-23a64e00-7108-11ea-85b0-8f6511cda497.png)
 
 ![Screenshot (57)](https://user-images.githubusercontent.com/40361120/77820358-bd213000-7107-11ea-8b4c-463d8690ab1e.png)
 ![Screenshot (58)](https://user-images.githubusercontent.com/40361120/77820362-c7dbc500-7107-11ea-8f6e-c71dc50acd4f.png)
