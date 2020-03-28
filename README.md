@@ -25,6 +25,9 @@ Import the Quiz to Visual Studio Code
 ![Screenshot (65)](https://user-images.githubusercontent.com/40361120/77820372-d4f8b400-7107-11ea-857e-7883fbee08d6.png)
 ![Screenshot (64)](https://user-images.githubusercontent.com/40361120/77820371-d4f8b400-7107-11ea-9156-17ea02940623.png)
 ![Screenshot (66)](https://user-images.githubusercontent.com/40361120/77820374-d5914a80-7107-11ea-8297-bae575996c19.png)
+![Screenshot (68)](https://user-images.githubusercontent.com/40361120/77820451-7849c900-7108-11ea-89f2-703a6a628845.png)
+![Screenshot (67)](https://user-images.githubusercontent.com/40361120/77820450-76800580-7108-11ea-8598-91f20e463818.png)
+
 
 
 
