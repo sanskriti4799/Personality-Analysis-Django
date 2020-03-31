@@ -1,0 +1,64 @@
+{% extends 'home/base.html' %} {% block title %} ACADEMICS {% endblock %} {% block content %}
+<body >
+    <form method="POST" action="/home/mainpost">
+    {% csrf_token %}
+<div class = "container-fluid " class='active' >
+
+    <div class="jumbotronaca">
+     <h3>Academics Quiz I</h3>
+    
+
+      {% for quest in q %}
+      <fieldset>
+       <h4>
+          <b>{{ forloop.counter }} . {{quest.question}}</b>
+          <br>
+          <br>
+          <input hidden='true' value=''>
+          <input type="radio"  id='rad'  value="{{quest.aw}}" name='{{quest.id}}' > {{quest.a}}<br>
+          <input type="radio"  id='rad' value="{{quest.bw}}" name='{{quest.id}}'> {{quest.b}}<br>
+          <input type="radio"  id='rad' value="{{quest.cw}}" name='{{quest.id}}'> {{quest.c}}<br>
+          <input type="radio"  id='rad' value="{{quest.dw}}" name='{{quest.id}}'> {{quest.d}}<br>
+          <br>
+        </h4>
+        
+      </fieldset>
+       {% endfor %}
+       <input type='hidden' name='mainsum' id='mainsum' value='0'/>
+       <button class="btn" onclick='calculate()' id='nextbtn'>RESULT</button>
+	   <p id='sum' onclick='calculate()'>GET SUM</p> 
+     </form>
+
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+   
+
+	
+	function calculate ()
+	{
+	var sum2=parseInt(0);
+	var x=document.querySelectorAll("[id='rad']");
+	for(i=0 ; i< x.length ; i++)
+	{
+	
+	if(x[i].checked)
+		{
+		console.log(x[i].value);
+		sum2 = sum2+ parseInt(x[i].value);		
+		}
+	
+	}
+	
+	//alert(sum2);
+	document.getElementById('sum').innerHTML=sum2;
+	document.getElementById('mainsum').value=sum2;
+	}
+	8
+   </script>
+    
+    
+    </div>
+    </div>
+
+
+{% endblock %}

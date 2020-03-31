@@ -1,0 +1,52 @@
+{% extends 'home/base.html' %} {% block title %} HOME {% endblock %} {% block content %}
+
+
+<form method="POST" action="/home/addon/">
+{% csrf_token %}
+<div class = "container-fluid" >
+
+<div class="jumbotron addon" >
+            <div class="container" >
+            <h1>CO-CURRICULAM ACTIVITIES</h1>
+            <hr>
+            <!--<label for="TITLE"><b>Title</b></label>
+            <textarea input type="text" placeholder=" " name="title" required rows='1' cols="10"></textarea>
+            <br>-->
+          
+            <label for="content"><b>Tell us about yourself </b></label>
+            <textarea input type="textarea" placeholder=" " name="content"  rows='8' cols="200"></textarea>
+            <br>
+            <br>
+          
+            <label for="content"><b>Tell about your Certifications </b></label>
+            
+            
+            <textarea input type="textarea" placeholder=" " name="content"  rows='8' cols="100"></textarea>
+            <br>
+            <br>
+
+            <label for="content"><b>Tell us about your Internships</b></label>
+          
+            <textarea input type="textarea" placeholder=" " name="content"  rows='8' cols="100"></textarea>
+            <br>
+            <br>
+            <label for="content"><b>Tell us about Hobbies & Interests</b></label>
+           
+            <textarea input type="textarea" placeholder=" " name="content"  rows='8' cols="100"></textarea>
+            <br>
+            <br>
+            <label for="content"><b>Tell us about your Future goals</b></label>
+            
+            <textarea input type="textarea" placeholder=" " name="content"  rows='8' cols="100"></textarea>
+            <br>
+            <br>
+
+            <hr>
+<form action='barg' method='POST'>
+      <button type='submit' >GENERATE REPORT</button>
+      </form>        </div>
+
+    </form>
+</div>
+</div>
+{% endblock %}

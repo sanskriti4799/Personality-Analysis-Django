@@ -1,0 +1,57 @@
+{% extends 'home/base.html' %} {% block title %} CONFIDENCE {% endblock %} {% block content %}
+
+<body>
+    <form method="POST" action="/home/confidence/">
+        {% csrf_token %}
+        <div class="container-fluid " class='active'>
+
+            <div class="jumbotroncon">
+                <h3>Confidence Quiz I</h3>
+
+                 {% for quest in q %}
+                    <fieldset>
+                        <h4>
+                            <b>{{ forloop.counter }} . {{quest.question}}</b>
+                            <br>
+                            <br>
+                            <input type="radio" name="{{quest.id}}" id='rad' value="{{quest.aw}}"> {{quest.a}}<br>
+                            <input type="radio" name="{{quest.id}}" id='rad' value="{{quest.bw}}"> {{quest.b}}<br>
+                            <input type="radio" name="{{quest.id}}" id='rad' value="{{quest.cw}}"> {{quest.c}}<br>
+                            <input type="radio" name="{{quest.id}}" id='rad' value="{{quest.dw}}"> {{quest.d}}<br>
+                            <br>
+                        </h4>
+
+                    </fieldset>
+                    {% endfor %}
+                    <input type='hidden' name='mainsum' id='mainsum' value='0' />
+                    <button class="btn" onclick='calculate()' id='nextbtn'>RESULT</button>
+                    <p id='sum' onclick='calculate()'>GET SUM</p>
+                </form>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <script>
+                    function calculate() {
+                        var sum2 = parseInt(0);
+                        var x = document.querySelectorAll("[id='rad']");
+                        for (i = 0; i < x.length; i++) {
+
+                            if (x[i].checked) {
+                                console.log(x[i].value);
+                                sum2 = sum2 + parseInt(x[i].value);
+                            }
+
+                        }
+
+                        //alert(sum2);
+
+                        document.getElementById('sum').innerHTML = sum2;
+                        document.getElementById('mainsum').value = sum2;
+                    }
+                </script>
+
+
+            </div>
+        </div>
+
+
+        {% endblock %}
